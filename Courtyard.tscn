@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Courtyard.png" type="Texture" id=1]
+
+[node name="Courtyard" type="Node2D"]
+
+[node name="Courtyard" type="Sprite" parent="."]
+position = Vector2( 832, 288 )
+scale = Vector2( 0.950958, 0.896843 )
+texture = ExtResource( 1 )

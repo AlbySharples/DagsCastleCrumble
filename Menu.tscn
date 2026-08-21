@@ -1,0 +1,7 @@
+[gd_scene format=2]
+
+[node name="Menu" type="Node2D"]
+
+[node name="DagsCastleCrumble" type="Sprite" parent="."]
+position = Vector2( 512, 303 )
+scale = Vector2( 0.533333, 0.561111 )

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Entrance2.png" type="Texture" id=1]
+
+[node name="Entrance2" type="Node2D"]
+
+[node name="Entrance2" type="Sprite" parent="."]
+position = Vector2( 672, 288 )
+scale = Vector2( 0.784033, 0.847802 )
+texture = ExtResource( 1 )
