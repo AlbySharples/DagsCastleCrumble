@@ -82,3 +82,14 @@ margin_top = 40.0
 margin_bottom = 9.8
 custom_fonts/font = SubResource( 2 )
 text = "00:00"
+
+[node name="Pies" type="Label" parent="HUD"]
+anchor_left = 0.844
+anchor_right = 1.0
+anchor_bottom = 0.107
+margin_left = -448.256
+margin_top = 40.0
+margin_right = -448.0
+margin_bottom = 9.8
+custom_fonts/font = SubResource( 2 )
+text = "Pies: 0"

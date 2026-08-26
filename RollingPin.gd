@@ -14,7 +14,6 @@ func _ready():
 	$Fire.emitting = true
 	$FireTrail.emitting = true
 
-	velocity.x = speed * direction
 	velocity.y = launch_height
 
 	connect("body_entered", self, "_on_body_entered")
@@ -22,6 +21,10 @@ func _ready():
 
 func _physics_process(delta):
 
+	# Set horizontal speed from current direction
+	velocity.x = speed * direction
+
+	# Gravity
 	velocity.y += gravitys * delta
 
 	position += velocity * delta
@@ -29,9 +32,12 @@ func _physics_process(delta):
 
 func _on_body_entered(body):
 
-	# Rolling pin hit something
 	# Ignore Dag
 	if body.name == "Player":
 		return
+
+	# Damage enemies
+	if body.has_method("take_damage"):
+		body.take_damage()
 
 	queue_free()

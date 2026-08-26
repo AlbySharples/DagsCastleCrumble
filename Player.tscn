@@ -45,7 +45,7 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 14, 28 )
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" groups=["player"]]
 position = Vector2( 512, 160 )
 script = ExtResource( 8 )
 __meta__ = {
@@ -54,8 +54,7 @@ __meta__ = {
 
 [node name="Sprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 3 )
-animation = "Throw"
-frame = 1
+animation = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 4 )
