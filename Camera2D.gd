@@ -19,7 +19,13 @@ func _ready():
 	limit_bottom = background.global_position.y + background_size.y / 2
 
 func _process(delta):
+
+	var target_x = global_position.x
+
 	if player.global_position.x > global_position.x + shift_threshold:
-		global_position.x += scroll_speed * delta
+		target_x = player.global_position.x - shift_threshold
+
 	elif player.global_position.x < global_position.x - left_threshold:
-		global_position.x -= scroll_speed * delta
+		target_x = player.global_position.x + left_threshold
+
+	global_position.x = lerp(global_position.x, target_x, 8 * delta)

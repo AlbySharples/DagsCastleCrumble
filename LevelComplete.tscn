@@ -76,3 +76,5 @@ custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 5 )
 custom_styles/hover = SubResource( 6 )
 text = "NEXT LEVEL"
+
+[connection signal="pressed" from="NextLevelButton" to="." method="_on_NextLevelButton_pressed"]

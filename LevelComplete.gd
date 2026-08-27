@@ -48,4 +48,8 @@ func _on_next_level_pressed():
 	Global.game_time = 0.0
 
 
-	get_tree().change_scene("res://Home.tscn")
+	get_tree().change_scene("res://Dungeon1.tscn")
+
+
+func _on_NextLevelButton_pressed():
+	pass # Replace with function body.
