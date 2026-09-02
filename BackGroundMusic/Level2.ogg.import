@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Level2.ogg-94bb9bfc77edc3199d38ba70ed76120a.oggstr"
+
+[deps]
+
+source_file="res://BackGroundMusic/Level2.ogg"
+dest_files=[ "res://.import/Level2.ogg-94bb9bfc77edc3199d38ba70ed76120a.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -21,6 +21,7 @@ var direction = 1
 var attacking = false
 var hurt = false
 var dead = false
+var death_landed = false
 var tutorial_attack_done = false
 
 var attack_timer = 0.0
@@ -29,7 +30,6 @@ var starting_x = 0
 
 
 func _ready():
-
 	starting_x = global_position.x
 
 	# Find Dag using the player group
@@ -55,7 +55,18 @@ func _physics_process(delta):
 
 	# Don't run normal behaviour while hurt or dead
 	if hurt or dead:
+
+		# Once he's landed and playing the death pose, freeze him completely
+		if dead and death_landed:
+			return
+
 		velocity.x = 0
+
+		if not is_on_floor():
+			velocity.y += GRAVITY
+		else:
+			velocity.y = 0
+
 		move_and_slide(velocity, Vector2.UP)
 		return
 
@@ -150,6 +161,7 @@ func attack():
 
 	# Play attack animation
 	sprite.play("Attack")
+	SfxPlayer.play(preload("res://SFX/Slash.ogg"))
 
 	# Wait for the Attack animation to completely finish
 	yield(sprite, "animation_finished")
@@ -218,6 +230,20 @@ func take_damage():
 	hurt = false
 	attacking = false
 	velocity = Vector2.ZERO
+
+	# Wait until _physics_process's own gravity has brought him to the floor
+	while not is_on_floor():
+		yield(get_tree(), "physics_frame")
+
+	# Stop all further physics interaction now that he's landed
+	death_landed = true
+	$CollisionShape2D.disabled = true
+
+	# Flatten the hitbox for the death pose
+	$CollisionShape2D.shape = $CollisionShape2D.shape.duplicate()
+	$CollisionShape2D.shape.extents.y = 6
+	$CollisionShape2D.position.y += 20
+
 
 	sprite.play("Death")
 

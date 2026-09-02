@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Bang.MP3-abb63a468da2d404e84847d41649c5bc.mp3str"
+
+[deps]
+
+source_file="res://SFX/Bang.MP3"
+dest_files=[ "res://.import/Bang.MP3-abb63a468da2d404e84847d41649c5bc.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

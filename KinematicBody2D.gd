@@ -3,7 +3,9 @@ extends KinematicBody2D
 const UP = Vector2(0, -1)
 const GRAVITY = 20
 const SPEED = 200
+var current_speed = SPEED
 const JUMP_HEIGHT = -550
+var current_jump_height = JUMP_HEIGHT
 
 export(PackedScene) var rolling_pin_scene
 
@@ -36,14 +38,14 @@ func _physics_process(delta):
 	if tutorial_can_move:
 
 		if Input.is_key_pressed(KEY_D):
-			motion.x = SPEED
+			motion.x = current_speed
 			$Sprite.flip_h = false
 
 			if not throwing:
 				$Sprite.play("Run")
 
 		elif Input.is_key_pressed(KEY_A):
-			motion.x = -SPEED
+			motion.x = -current_speed
 			$Sprite.flip_h = true
 
 			if not throwing:
@@ -68,9 +70,10 @@ func _physics_process(delta):
 	if tutorial_can_jump and is_on_floor():
 
 		if Input.is_key_pressed(KEY_SPACE):
-			motion.y = JUMP_HEIGHT
+			motion.y = current_jump_height
 
 			if not throwing:
+				SfxPlayer.play(preload("res://SFX/Jump.wav"))
 				$Sprite.play("Jump")
 
 	# Jump/Fall animations only when jumping is unlocked
@@ -93,6 +96,7 @@ func _physics_process(delta):
 	if tutorial_can_shoot:
 
 		if Input.is_action_just_pressed("shoot") and shoot_timer <= 0 and not throwing:
+			SfxPlayer.play(preload("res://SFX/Shoot.mp3"))
 			shoot()
 
 	# =================================
@@ -101,6 +105,7 @@ func _physics_process(delta):
 
 	if Input.is_action_just_pressed("use_potion"):
 		if Global.use_potion():
+			SfxPlayer.play(preload("res://SFX/Jump.wav"))
 			print("Potion used!")
 
 	# Move

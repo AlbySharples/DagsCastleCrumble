@@ -89,10 +89,13 @@ func shoot():
 
 	# Play the full shoot animation
 	sprite.play("Shoot")
+	
 
 # Wait until 0.1 seconds before the animation finishes
 	var shoot_length = sprite.frames.get_frame_count("Shoot") / sprite.frames.get_animation_speed("Shoot")
+	
 	yield(get_tree().create_timer(shoot_length - 0.3), "timeout")
+	SfxPlayer.play(preload("res://SFX/Bow.ogg"))
 
 	var arrow = arrow_scene.instance()
 

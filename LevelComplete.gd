@@ -3,11 +3,11 @@ extends Node2D
 onready var timer_label = $Timer
 onready var lives_label = $"Lives Remaining"
 onready var pies_label = $"Pies Collected"
-onready var next_level_button = $NextLevelButton
-
+onready var main_menu_button = $MainMenuButton
 
 func _ready():
-
+	
+	MusicPlayer.play_music(preload("res://BackGroundMusic/Victory.wav"), -12)
 	# ================================
 	# FINAL TIME
 	# ================================
@@ -17,13 +17,11 @@ func _ready():
 
 	timer_label.text = "Time Taken: %02d:%02d" % [minutes, seconds]
 
-
 	# ================================
 	# LIVES REMAINING
 	# ================================
 
 	lives_label.text = "Lives Remaining: " + str(Global.lives)
-
 
 	# ================================
 	# PIES COLLECTED
@@ -31,25 +29,12 @@ func _ready():
 
 	pies_label.text = "Pies Collected: " + str(Global.pies)
 
-
 	# ================================
-	# NEXT LEVEL BUTTON
+	# MAIN MENU BUTTON
 	# ================================
-
-	next_level_button.connect(
-		"pressed",
-		self,
-		"_on_next_level_pressed"
-	)
-
-
-func _on_next_level_pressed():
-
-	Global.game_time = 0.0
-
-
-	get_tree().change_scene("res://Dungeon1.tscn")
-
 
 func _on_NextLevelButton_pressed():
+	Global.lives = 3
+	Global.potions = 3
+	get_tree().change_scene("res://Dungeon1.tscn")
 	pass # Replace with function body.

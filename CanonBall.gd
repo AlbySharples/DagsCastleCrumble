@@ -66,7 +66,8 @@ func _on_body_entered(body):
 			position.y -= 8
 
 			$AnimatedSprite.play("Landing")
-
+	
 			yield($AnimatedSprite, "animation_finished")
+			
 
 			queue_free()

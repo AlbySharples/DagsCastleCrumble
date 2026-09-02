@@ -129,7 +129,7 @@ func _process(delta):
 
 			step = 6
 
-			tutorial_text.text = "CLICK TO THROW YOUR ROLLING PIN."
+			tutorial_text.text = "CLICK TO THROW YOUR\n\nROLLING PIN."
 
 
 	# =================================

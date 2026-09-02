@@ -1,0 +1,347 @@
+[gd_scene load_steps=74 format=2]
+
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Death/Death_04.png" type="Texture" id=1]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Death/Death_05.png" type="Texture" id=2]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Death/Death_06.png" type="Texture" id=3]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Idle/Idle_01.png" type="Texture" id=4]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Idle/Idle_04.png" type="Texture" id=5]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Idle/Idle_05.png" type="Texture" id=6]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Idle/Idle_06.png" type="Texture" id=7]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Idle/Idle_03.png" type="Texture" id=8]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Idle/Idle_08.png" type="Texture" id=9]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Idle/Idle_02.png" type="Texture" id=10]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Idle/Idle_07.png" type="Texture" id=11]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Attack2/Attack2_02.png" type="Texture" id=12]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Attack3/Attack3_02.png" type="Texture" id=13]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Attack3/Attack3_03.png" type="Texture" id=14]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Fall/Fall_02.png" type="Texture" id=15]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Attack2/Attack2_04.png" type="Texture" id=16]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Run/Run_08.png" type="Texture" id=17]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Take_Hit/Take_Hit_02.png" type="Texture" id=18]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Take_Hit_White/Take_Hit_White_01.png" type="Texture" id=19]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Take_Hit_White/Take_Hit_White_03.png" type="Texture" id=20]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Attack3/Attack3_04.png" type="Texture" id=21]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Take_Hit_White/Take_Hit_White_04.png" type="Texture" id=22]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Death/Death_01.png" type="Texture" id=23]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Death/Death_03.png" type="Texture" id=24]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Take_Hit/Take_Hit_03.png" type="Texture" id=25]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Attack1/Attack1_02.png" type="Texture" id=26]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Run/Run_06.png" type="Texture" id=27]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Attack3/Attack3_01.png" type="Texture" id=28]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Run/Run_02.png" type="Texture" id=29]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Take_Hit_White/Take_Hit_White_02.png" type="Texture" id=30]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Jump/Jump_02.png" type="Texture" id=31]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Run/Run_07.png" type="Texture" id=32]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Fall/Fall_01.png" type="Texture" id=33]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Attack1/Attack1_03.png" type="Texture" id=34]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Death/Death_02.png" type="Texture" id=35]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Jump/Jump_01.png" type="Texture" id=36]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Attack1/Attack1_04.png" type="Texture" id=37]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Run/Run_05.png" type="Texture" id=38]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Run/Run_03.png" type="Texture" id=39]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Attack1/Attack1_01.png" type="Texture" id=40]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Attack2/Attack2_01.png" type="Texture" id=41]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Take_Hit/Take_Hit_01.png" type="Texture" id=42]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Take_Hit/Take_Hit_04.png" type="Texture" id=43]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Attack2/Attack2_03.png" type="Texture" id=44]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Run/Run_04.png" type="Texture" id=45]
+[ext_resource path="res://KingCrust/King_Sprite_Frames/Run/Run_01.png" type="Texture" id=46]
+[ext_resource path="res://KingCrust.gd" type="Script" id=47]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 40 ), ExtResource( 26 ), ExtResource( 34 ), ExtResource( 37 ) ],
+"loop": false,
+"name": "Attack1",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 41 ), ExtResource( 12 ), ExtResource( 44 ), ExtResource( 16 ) ],
+"loop": false,
+"name": "Attack2",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 28 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 21 ) ],
+"loop": false,
+"name": "Attack3",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 23 ), ExtResource( 35 ), ExtResource( 24 ), ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "Death",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 33 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "Fall",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 10 ), ExtResource( 8 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 11 ), ExtResource( 9 ) ],
+"loop": false,
+"name": "Idle",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 36 ), ExtResource( 31 ) ],
+"loop": true,
+"name": "Jump",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 46 ), ExtResource( 29 ), ExtResource( 39 ), ExtResource( 45 ), ExtResource( 38 ), ExtResource( 27 ), ExtResource( 32 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "Run",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 42 ), ExtResource( 18 ), ExtResource( 25 ), ExtResource( 43 ) ],
+"loop": true,
+"name": "TakeHit",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 19 ), ExtResource( 30 ), ExtResource( 20 ), ExtResource( 22 ) ],
+"loop": true,
+"name": "TakeHitWhite",
+"speed": 10.0
+} ]
+
+[sub_resource type="CircleShape2D" id=32]
+radius = 71.5542
+
+[sub_resource type="CircleShape2D" id=33]
+radius = 53.0094
+
+[sub_resource type="CircleShape2D" id=34]
+radius = 46.0109
+
+[sub_resource type="CircleShape2D" id=35]
+radius = 28.0
+
+[sub_resource type="CircleShape2D" id=8]
+radius = 49.163
+
+[sub_resource type="CircleShape2D" id=9]
+radius = 54.037
+
+[sub_resource type="CircleShape2D" id=10]
+radius = 47.0106
+
+[sub_resource type="CircleShape2D" id=11]
+radius = 36.1248
+
+[sub_resource type="CircleShape2D" id=12]
+radius = 33.1361
+
+[sub_resource type="CircleShape2D" id=13]
+radius = 28.1603
+
+[sub_resource type="CircleShape2D" id=14]
+radius = 25.0799
+
+[sub_resource type="CircleShape2D" id=15]
+radius = 22.0227
+
+[sub_resource type="CircleShape2D" id=36]
+radius = 19.0263
+
+[sub_resource type="CircleShape2D" id=20]
+radius = 60.8276
+
+[sub_resource type="CircleShape2D" id=21]
+radius = 53.0377
+
+[sub_resource type="CircleShape2D" id=22]
+radius = 53.0
+
+[sub_resource type="CircleShape2D" id=23]
+radius = 59.0
+
+[sub_resource type="CircleShape2D" id=24]
+radius = 48.0104
+
+[sub_resource type="CircleShape2D" id=25]
+radius = 37.855
+
+[sub_resource type="CircleShape2D" id=26]
+radius = 30.0666
+
+[sub_resource type="CircleShape2D" id=27]
+radius = 23.0217
+
+[sub_resource type="CircleShape2D" id=28]
+radius = 20.025
+
+[sub_resource type="CircleShape2D" id=29]
+radius = 17.1172
+
+[sub_resource type="CircleShape2D" id=30]
+
+[sub_resource type="RectangleShape2D" id=31]
+extents = Vector2( 44, 80 )
+
+[node name="KingCrust" type="KinematicBody2D"]
+position = Vector2( -128, -160 )
+script = ExtResource( 47 )
+__meta__ = {
+"_edit_group_": true
+}
+speed = 170
+attack_stop_distance = 170
+health = 20
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -3.8147e-06, -64 )
+scale = Vector2( 2.85, 2.98874 )
+frames = SubResource( 1 )
+animation = "Idle"
+
+[node name="Attack1Hitbox" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Attack1Hitbox"]
+position = Vector2( 32, 0 )
+shape = SubResource( 32 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Attack1Hitbox"]
+position = Vector2( 78, 5 )
+shape = SubResource( 33 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Attack1Hitbox"]
+position = Vector2( 119, 6 )
+shape = SubResource( 34 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Attack1Hitbox"]
+position = Vector2( 171, 6 )
+shape = SubResource( 35 )
+
+[node name="Attack2Hitbox" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Attack2Hitbox"]
+position = Vector2( -140, -50 )
+shape = SubResource( 8 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Attack2Hitbox"]
+position = Vector2( -119, -7 )
+shape = SubResource( 9 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Attack2Hitbox"]
+position = Vector2( -70, 27 )
+shape = SubResource( 10 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Attack2Hitbox"]
+position = Vector2( -11, 52 )
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Attack2Hitbox"]
+position = Vector2( 27, 59 )
+shape = SubResource( 12 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Attack2Hitbox"]
+position = Vector2( 60, 58 )
+shape = SubResource( 13 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Attack2Hitbox"]
+position = Vector2( 95, 54 )
+shape = SubResource( 14 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Attack2Hitbox"]
+position = Vector2( 126, 49 )
+shape = SubResource( 15 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Attack2Hitbox"]
+position = Vector2( 153, 39 )
+shape = SubResource( 36 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Attack2Hitbox"]
+position = Vector2( 172, 31 )
+shape = SubResource( 36 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Attack2Hitbox"]
+position = Vector2( 197, 18 )
+shape = SubResource( 36 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Attack2Hitbox"]
+position = Vector2( 212, -5 )
+shape = SubResource( 36 )
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Attack2Hitbox"]
+position = Vector2( 207, -35 )
+shape = SubResource( 36 )
+
+[node name="Attack3Hitbox" type="Area2D" parent="."]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Attack3Hitbox"]
+position = Vector2( 121, 25 )
+shape = SubResource( 20 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Attack3Hitbox"]
+position = Vector2( 146, -97 )
+shape = SubResource( 21 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Attack3Hitbox"]
+position = Vector2( 145, -116 )
+shape = SubResource( 22 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Attack3Hitbox"]
+position = Vector2( 160, -52 )
+shape = SubResource( 23 )
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Attack3Hitbox"]
+position = Vector2( 113, -152 )
+shape = SubResource( 24 )
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Attack3Hitbox"]
+position = Vector2( 43, -190 )
+shape = SubResource( 25 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Attack3Hitbox"]
+position = Vector2( 80, -188 )
+shape = SubResource( 26 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Attack3Hitbox"]
+position = Vector2( -10, -202 )
+shape = SubResource( 27 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="Attack3Hitbox"]
+position = Vector2( 12, -207 )
+shape = SubResource( 28 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="Attack3Hitbox"]
+position = Vector2( -19, -205 )
+shape = SubResource( 29 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="Attack3Hitbox"]
+position = Vector2( -46, -208 )
+shape = SubResource( 30 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="Attack3Hitbox"]
+position = Vector2( -64, -201 )
+shape = SubResource( 30 )
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="Attack3Hitbox"]
+position = Vector2( -79, -193 )
+shape = SubResource( 30 )
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="Attack3Hitbox"]
+position = Vector2( -95, -184 )
+shape = SubResource( 30 )
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="Attack3Hitbox"]
+position = Vector2( -112, -170 )
+shape = SubResource( 30 )
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="Attack3Hitbox"]
+position = Vector2( -126, -157 )
+shape = SubResource( 30 )
+
+[node name="AttackTimer" type="Timer" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 6, 4 )
+shape = SubResource( 31 )
+
+[node name="Position2D" type="Position2D" parent="."]
+position = Vector2( 128, 192 )
+
+[connection signal="body_entered" from="Attack1Hitbox" to="." method="_on_Attack1Hitbox_body_entered"]
+[connection signal="body_entered" from="Attack2Hitbox" to="." method="_on_Attack2Hitbox_body_entered"]
+[connection signal="body_entered" from="Attack3Hitbox" to="." method="_on_Attack3Hitbox_body_entered"]
+[connection signal="timeout" from="AttackTimer" to="." method="_on_AttackTimer_timeout"]

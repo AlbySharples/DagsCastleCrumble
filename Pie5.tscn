@@ -1,0 +1,30 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Pies/Pie2/pa7.png" type="Texture" id=1]
+[ext_resource path="res://Pies/Pie2/pa3.png" type="Texture" id=2]
+[ext_resource path="res://Pies/Pie2/pa2.png" type="Texture" id=3]
+[ext_resource path="res://Pies/Pie2/pa5.png" type="Texture" id=4]
+[ext_resource path="res://Pies/Pie2/pa6.png" type="Texture" id=5]
+[ext_resource path="res://Pies/Pie2/pa1.png" type="Texture" id=6]
+[ext_resource path="res://Pies/Pie2/pa4.png" type="Texture" id=7]
+[ext_resource path="res://Pie5.gd" type="Script" id=8]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 3 ), ExtResource( 2 ), ExtResource( 7 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+
+[node name="Pie5" type="Area2D"]
+script = ExtResource( 8 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2( 3, 1.5 )
+shape = SubResource( 2 )

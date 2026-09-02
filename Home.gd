@@ -8,6 +8,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	MusicPlayer.play_music(preload("res://BackGroundMusic/Menu.wav"))
 	pass # Replace with function body.
 
 

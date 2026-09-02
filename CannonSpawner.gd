@@ -13,7 +13,9 @@ export var spawn_y = -100
 func _ready():
 
 	randomize()
+	
 	spawn_cannonballs()
+	
 
 
 func spawn_cannonballs():
@@ -32,8 +34,10 @@ func spawn_cannonballs():
 
 		# Random horizontal position
 		var random_x = rand_range(min_x, max_x)
-
+		SfxPlayer.play(preload("res://SFX/Canonball.wav"), -15)
 		cannonball.global_position = Vector2(
 			random_x,
 			spawn_y
+			
+			
 		)
